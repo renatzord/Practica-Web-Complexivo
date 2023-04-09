@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org/">
+	
+	<linkhead>
+		<meta charset="UTF-8"/>
+		<title>Recibir Parametros del request HTT GET - URL</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+	</head>
+	
+	<body>
+		
+		<h1 class="color-rojo">Aqui se recibe Algo, No se que es 🤷‍♂️</h1>
+		<h2 class="color-azul" th:text="${titulo}" ></h2>
+		
+		<li>
+			<a th:href="@{/variables/string/} + 'Bienvenido a Casa Renato'">/variables/string/ Adelantee!</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/variables/string/} + 'Bienvenida a Casa Elizabeth'">/variables/string/ Dale un Poco mas!</a>
+		</li>
+		
+			<li>
+			<a th:href="@{/variables/string/} + 'Bienvenido a Casa Alejandro'+'/'+'80'">/variables/string/BIENVNIDO!</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/variables/string/} + ${titulo}">/variables/string/ Titulo</a>
+		</li>
+		
+	</body>	
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org/">
+	
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Recibir Parametros del request HTT GET - URL</title>
+	</head>
+	
+	<body>
+		
+		<h1>Aqui se recibe Algo, No se que es 🤷‍♂️</h1>
+		<div th:text="${resultado}"></div>
+		
+		<li>
+			<a th:href="@{/enviar/string(texto='Que tal como vas')}">/enviar/string?texto= Que tal Renato!</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/enviar/string(texto='Aun sigues Aqui?')}">/enviar/string?texto= Que tal Alejandro!</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/enviar/mix-params(saludo='Aun sigues Aqui?', numero = 23)}">/enviar/mixparams?texto= Que tal Renato!&numero23</a>
+		</li>
+		
+		<li>
+			<a th:href="@{/enviar/mix-params-request(saludo='Aun sigues Aqui?', numero = 23)}">/enviar/mixparams-request?texto= Que tal Renato!&numero23</a>
+		</li>
+		
+	</body>	
+</html>
